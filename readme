@@ -12,3 +12,5 @@ git status
 pwd -- afiseaza directorul curent
 
 cum fac sa sterg credentialele?
+
+5) ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
