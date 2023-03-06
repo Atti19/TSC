@@ -1,2 +1,6 @@
 /TSClab2/work
 TSClab2/test.v:Zone.Identifier
+TSC_lab3/work
+TSC_lab3/*.Identifier
+TSC_lab3/test/.vs
+*:Zone.Identifier
