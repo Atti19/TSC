@@ -16,3 +16,6 @@ cum fac sa sterg credentialele?
 git config --global --unset credential.helper
 
 5) ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+lab3:
+de adaugat rezultat
