@@ -21,22 +21,6 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
   timeunit 1ns/1ns;
 
   instruction_t  iw_reg [0:31];  // an array of instruction_word structures
-  rezultat_t rez; 
-
-  //functia care calculeaza rezultatul in functie de opcode
-  function rezultat_t rezultat_c(input operand_t operand_a, operand_t operand_b, opcode_t opcode);
-    case(opcode)
-      ZERO : return 0;
-      PASSA: return operand_a;
-      PASSB: return operand_b;
-      ADD : return operand_a + operand_b;
-      SUB : return operand_a - operand_b;
-      MULT: return operand_a * operand_b;
-      DIV : return operand_a / operand_b;
-      MOD : return operand_a % operand_b;
-      default: return 0;
-    endcase
-  endfunction
 
   // write to the register
   always@(posedge clk, negedge reset_n)   // write into register
@@ -45,13 +29,12 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
         iw_reg[i] = '{opc:ZERO,default:0};  // reset to all zeros
     end
     else if (load_en) begin
-      rez = rezultat_c(operand_a, operand_b, opcode);
-      iw_reg[write_pointer] = '{opcode,operand_a,operand_b, rez};
+      iw_reg[write_pointer] = '{opcode,operand_a,operand_b};
     end
 
   // read from the register
   assign instruction_word = iw_reg[read_pointer];  // continuously read from register
-  
+
 // compile with +define+FORCE_LOAD_ERROR to inject a functional bug for verification to catch
 `ifdef FORCE_LOAD_ERROR
 initial begin
