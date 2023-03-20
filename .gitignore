@@ -10,3 +10,5 @@ TSC_lab4/test/.vs
 */work
 */*.Identifier
 */sim
+*/.wlf
+*/test
