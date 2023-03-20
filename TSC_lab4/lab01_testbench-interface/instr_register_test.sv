@@ -50,12 +50,22 @@ module instr_register_test
     @(posedge clk) load_en = 1'b0;  // turn-off writing to register
 
     // read back and display same three register locations
+   // $display("\nReading back the same register locations written...");
+   // for (int i=0; i<NUMBER_OF_TRANSACTIONS; i++) begin
+   //   // later labs will replace this loop with iterating through a
+   //   // scoreboard to determine which addresses were written and
+   //   // the expected values to be read back
+   //   @(posedge clk) read_pointer = i;
+   //   @(negedge clk) print_results;
+   // end
+
+    // read back and display same three register locations
     $display("\nReading back the same register locations written...");
-    for (int i=0; i<=NUMBER_OF_TRANSACTIONS; i++) begin
+    for (int i=0; i<NUMBER_OF_TRANSACTIONS; i++) begin
       // later labs will replace this loop with iterating through a
       // scoreboard to determine which addresses were written and
       // the expected values to be read back
-      @(posedge clk) read_pointer = i;
+      @(posedge clk) read_pointer = $unsigned($urandom())%32;
       @(negedge clk) print_results;
     end
 
