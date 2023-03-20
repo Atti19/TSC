@@ -7,3 +7,6 @@ TSC_lab3/test/.vs
 TSC_lab4/work
 TSC_lab4/*.Identifier
 TSC_lab4/test/.vs
+*/work
+*/*.Identifier
+*/sim

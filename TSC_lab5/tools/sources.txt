@@ -1,0 +1,6 @@
+../../TSC_LAB5/lab_dut/instr_register_pkg.sv   	                +incdir+../../TSC_LAB5/lab_dut
+../../TSC_LAB5/lab_dut/instr_register.sv   	                +incdir+../../TSC_LAB5/lab_dut
+../../TSC_LAB5/lab01_testbench-interface/instr_register_test.sv
+../../TSC_LAB5/lab01_testbench-interface/top.sv
+
+../lab01_testbench-interface/top.sv                    +incdir+../lab02_clocking_blocks
