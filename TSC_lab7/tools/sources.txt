@@ -1,7 +1,0 @@
-../../TSC_LAB6/lab_dut/instr_register_pkg.sv   	                +incdir+../../TSC_LAB6/lab_dut
-../../TSC_LAB6/lab01_testbench-interface/tb_ifc.sv
-../../TSC_LAB6/lab_dut/instr_register.sv   	                +incdir+../../TSC_LAB6/lab_dut
-../../TSC_LAB6/lab01_testbench-interface/instr_register_test.sv
-../../TSC_LAB6/lab01_testbench-interface/top.sv
-
-../lab01_testbench-interface/top.sv                    +incdir+../lab02_clocking_blocks
