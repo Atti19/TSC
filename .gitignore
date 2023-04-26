@@ -16,3 +16,9 @@ TSC_lab6/work
 TSC_lab6/*.Identifier
 TSC_lab6/test/.vs
 TSC_lab6/*.wlf
+TSC_lab7/work
+TSC_lab7/sim/work
+TSC_lab7/sim/*.Identifier
+TSC_lab7/test/*.Identifier
+TSC_lab7/test/.vs
+
