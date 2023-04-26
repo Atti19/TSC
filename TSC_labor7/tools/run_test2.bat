@@ -1,0 +1,1 @@
+call run_test.bat 3 3 7777 gui
